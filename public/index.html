@@ -15,21 +15,27 @@
 
     <nav>
         <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="login.html">Login</a></li>
-            <li><a href="https://google.com">Google</a></li>
+            <!-- A11y change made here-->
+            <li><a aria-label="Home" href="/">Home</a></li>
+            <!-- A11y change made here-->
+            <li><a aria-label="About"href="about.html">About</a></li>
+            <!-- A11y change made here-->
+            <li><a aria-label="Login"href="login.html">Login</a></li>
+            <!-- A11y change made here-->
+            <li><a aria-label="Google"href="https://google.com">Google</a></li>
         </ul>
     </nav>
 
-    <div class="hero">
+    <!-- SEO optimization done here -->
+    <div class="hero" itemscope itemtype="https://schema.org/actionApplication">
         <h1>Personal Budget</h1>
         <h2>A personal-budget management app</h2>
     </div>
 
     <main class="center" id="main">
 
-        <div class="page-area">
+        <!-- HTML Semantic change made here -->
+        <section class="page-area">
 
             <article>
                 <h1>Stay on track</h1>
@@ -95,7 +101,7 @@
                 </p>
             </article>
 
-        </div>
+        </section>
 
     </main>
 
