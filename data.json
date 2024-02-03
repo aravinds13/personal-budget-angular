@@ -18,15 +18,15 @@
         },
         {
             "title": "WiFi",
-            "budget": 25
+            "budget": 100
         },
         {
-            "title": "Netflix",
-            "budget": 10
+            "title": "Entertainment",
+            "budget": 60
         },
         {
             "title": "Phone",
-            "budget": 15
+            "budget": 25
         }
     ]
 }
