@@ -117,8 +117,8 @@
         </div>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js" integrity="sha512-quHCp3WbBNkwLfYUMd+KwBAgpVukJu5MncuQaWXgCrfgcxCJAq/fo+oqrRKOj+UKEmyMCG3tb8RB63W+EmrOBg==" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" integrity="sha512-s+xg36jbIujB2S2VKfpGmlC3T5V2TF3lY48DX7u2r9XzGzgPsa6wTpOQA7J9iffvdeBN0q9tKzRxVxw1JviZPg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.7/axios.min.js" integrity="sha512-NQfB/bDaB8kaSXF8E77JjhHG5PM6XVRxvHzkZiwl3ddWCEPBa23T76MuWSwAJdMGJnmQqM0VeY9kFszsrBEFrQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <!-- HTML Semantic change made here -->
     <code>
@@ -139,21 +139,20 @@
                 };
 
             function createChart() {
-                var ctx = document.getElementById('myChart').getContext('2d');
+                var ctx = document.getElementById("myChart").getContext("2d");
                 var myPieChart = new Chart(ctx, {
                     type: 'pie',
                     data: dataSource
                 });
             }
-
             function getBudget() {
                 axios.get('http://localhost:3000/budget')
                 .then(function (res) {
                     for (var i = 0; i < res.data.myBudget.length; i++) {
                         dataSource.datasets[0].data[i] = res.data.myBudget[i].budget;
                         dataSource.labels[i] = res.data.myBudget[i].title;
-                        createChart();
                     }
+                    createChart();
                 });
             }
 
