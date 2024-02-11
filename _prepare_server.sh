@@ -16,7 +16,7 @@ firewall-cmd --zone=public --add-port=3003/tcp --permanent
 firewall-cmd --reload
 yum makecache
 yum install git -y
-curl -sL https://rpm.nodesource.com/setup_12.x | sudo bash -
+curl -sL https://rpm.nodesource.com/setup_16.x | sudo bash -
 yum install nodejs -y
 git --version
 node --version
