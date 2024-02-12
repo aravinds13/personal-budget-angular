@@ -47,8 +47,8 @@ export class HomepageComponent implements OnInit {
     //     type: 'pie',
     //     data: this.dataSource
     // });
-    let htmlRef = this.elementRef.nativeElement.querySelector(`#myChart`);
-    this.chart = new Chart(htmlRef, {
+    // let htmlRef = this.elementRef.nativeElement.querySelector(`#myChart`);
+    this.chart = new Chart("myChart", {
       type: 'pie',
       data: this.dataSource
     });
